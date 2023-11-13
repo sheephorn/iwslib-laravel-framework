@@ -1,0 +1,16 @@
+{
+    "name": "iwslib-laravel/framework",
+    "description": "Laravel Custom",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "IwslibLaravel\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^10.0.0",
+        "laravel/sanctum": "^3.2"
+    }
+}
