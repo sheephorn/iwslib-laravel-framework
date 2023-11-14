@@ -15,11 +15,15 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13"
     },
-    "extra" : {
-        "laravel" : {
+    "extra": {
+        "laravel": {
             "providers": [
-                "IwslibLaravel\\Providers\\AppServiceProvider"
-            ]
+                "IwslibLaravel\\Providers\\AppServiceProvider",
+                "IwslibLaravel\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+            },
+            "dont-discover": []
         }
     }
 
