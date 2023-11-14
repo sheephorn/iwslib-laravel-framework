@@ -30,6 +30,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+        logger("booted");
+
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
         if ($this->app->environment(EnvironmentName::LOCAL->value)) {
@@ -52,6 +55,13 @@ class AppServiceProvider extends ServiceProvider
             Log::withContext([
                 '__job_uuid__' => strval(Str::uuid()),
             ]);
+        });
+
+
+        //デフォルトルート登録
+        $this->routes(function () {
+            Route::middleware('web')
+                ->group(__DIR__ . '/../routes/web.php');
         });
     }
 }
