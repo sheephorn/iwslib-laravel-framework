@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    # カレントディレクトリでイメージを構築
+    build: .
+    # カレントディレクトリをコンテナへマウント
+    volumes:
+      - "./:/usr/src/myapp"
+    # プロセスを継続させてコンテナの正常終了を防ぐ
+    stdin_open: true

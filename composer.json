@@ -9,6 +9,18 @@
         }
     },
     "require": {
-        "laravel/framework": "^10.0"
+        "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.3"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.13"
+    },
+    "extra" : {
+        "laravel" : {
+            "providers": [
+                "IwslibLaravel\\Providers\\AppServiceProvider"
+            ]
+        }
     }
+
 }
