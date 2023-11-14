@@ -56,12 +56,5 @@ class AppServiceProvider extends ServiceProvider
                 '__job_uuid__' => strval(Str::uuid()),
             ]);
         });
-
-
-        //デフォルトルート登録
-        $this->routes(function () {
-            Route::middleware('web')
-                ->group(__DIR__ . '/../routes/web.php');
-        });
     }
 }
