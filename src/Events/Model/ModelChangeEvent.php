@@ -1,6 +1,6 @@
 <?php
 
-namespaceIwslibLaravel\Events\Model;
+namespace IwslibLaravel\Events\Model;
 
 use IwslibLaravel\Models\Feature\IModelFeature;
 use Illuminate\Broadcasting\InteractsWithSockets;

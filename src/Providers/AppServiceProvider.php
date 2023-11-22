@@ -30,10 +30,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-
-        logger("booted");
-
+        // マイグレーション
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+        // ビュー
+        $this->loadViewsFrom(__DIR__ . '/../resources/views/emails', 'iwsliblaravel-emails');
 
         if ($this->app->environment(EnvironmentName::LOCAL->value)) {
             // IDEヘルパー登録

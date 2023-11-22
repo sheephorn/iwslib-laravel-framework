@@ -16,13 +16,17 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\DB;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * @property ?string id ユーザーID
+ * @property  ?string email Email
+ * @property  ?string password ログインパスワード
+ */
 class User extends Authenticatable implements IModelFeature
 {
     use HasApiTokens, HasFactory, Notifiable, HasUuids, SoftDeletes;
 
     const COL_NAME_ID = 'id';
     const COL_NAME_EMAIL = 'email';
-    const COL_NAME_NAME = 'name';
     const COL_NAME_PASSWORD = 'password';
 
     const COL_NAME_CREATED_BY = ColumnName::CREATED_BY;
@@ -94,7 +98,7 @@ class User extends Authenticatable implements IModelFeature
 
     public function getModelName(): string
     {
-        return "ユーザー情報";
+        return "ログインユーザー情報";
     }
 
     public function getChangeLogMessage($before, $after): ?string

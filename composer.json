@@ -8,18 +8,26 @@
             "IwslibLaravel\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "IwslibLaravel\\Test\\": "tests/"
+        }
+    },
     "require": {
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.3"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "^2.13"
+        "barryvdh/laravel-ide-helper": "^2.13",
+        "phpunit/phpunit": "^10.4",
+        "orchestra/testbench": "^8.15"
     },
     "extra": {
         "laravel": {
             "providers": [
                 "IwslibLaravel\\Providers\\AppServiceProvider",
-                "IwslibLaravel\\Providers\\RouteServiceProvider"
+                "IwslibLaravel\\Providers\\RouteServiceProvider",
+                "IwslibLaravel\\Providers\\EventServiceProvider"
             ],
             "aliases": {
             },
