@@ -57,6 +57,7 @@ abstract class BaseJob implements ShouldQueue
     {
         Log::withContext([
             '__job_class__' => static::class,
+            '__job_uuid__' => strval(Str::uuid()),
         ]);
     }
 }
